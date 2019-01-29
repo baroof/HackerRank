@@ -8,7 +8,13 @@ import sys
 
 # Complete the minimumSwaps function below.
 def minimumSwaps(arr):
-  return("woo!")
+  swaps = 0
+  for c, v in enumerate(arr, 1):
+    while v != c:
+      arr[c - 1], arr[v-1] = arr[v-1], arr[c-1]
+      v = arr[c-1]
+      swaps += 1
+  return swaps
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
