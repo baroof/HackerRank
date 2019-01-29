@@ -1,2 +1,5 @@
 output.txt
 .vscode/
+input*.txt
+.DS_Store
+k-test
